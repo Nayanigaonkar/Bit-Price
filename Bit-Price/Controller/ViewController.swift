@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         
         currencyPicker.tag = 1
         criptoPicker.tag = 2
+        
+        selectedCurrency = coinManager.currencyArray[0]
+        selectedCripto = coinManager.criptoArray[0]
     }
 }
 
