@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-6d-mme">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LU-M1-1Ei" userLabel="Top view">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="401"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="255.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ePC-u7-pVJ">
-                                                <rect key="frame" x="0.0" y="130.5" width="414" height="140"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ePC-u7-pVJ">
+                                                <rect key="frame" x="0.0" y="52.5" width="414" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bit Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSI-Ws-3F0">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -33,42 +32,46 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUO-vB-BrC" userLabel="Coin view">
-                                                        <rect key="frame" x="0.0" y="60" width="414" height="80"/>
+                                                        <rect key="frame" x="0.0" y="70" width="414" height="80"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vCE-ZL-Q87">
-                                                                <rect key="frame" x="10" y="0.0" width="394" height="80"/>
+                                                                <rect key="frame" x="10" y="10" width="394" height="60"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinImage" translatesAutoresizingMaskIntoConstraints="NO" id="FF0-Lb-xbD">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="80" id="33k-Ks-zCJ"/>
+                                                                            <constraint firstAttribute="width" secondItem="FF0-Lb-xbD" secondAttribute="height" multiplier="4:3" id="oMv-w1-AHZ"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="....." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcb-f7-CNP">
-                                                                        <rect key="frame" x="100" y="25" width="223.5" height="30"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcb-f7-CNP">
+                                                                        <rect key="frame" x="100" y="15" width="224" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="textColor" name="Title Color"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBx-tX-KMg">
-                                                                        <rect key="frame" x="343.5" y="25" width="50.5" height="30"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBx-tX-KMg">
+                                                                        <rect key="frame" x="344" y="5" width="50" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="lBx-tX-KMg" secondAttribute="height" multiplier="1:1" id="Qxh-aT-7lA"/>
+                                                                        </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="textColor" name="Title Color"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="view-bg-color"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="vCE-ZL-Q87" secondAttribute="bottom" id="1cS-YK-MB9"/>
-                                                            <constraint firstItem="vCE-ZL-Q87" firstAttribute="top" secondItem="GUO-vB-BrC" secondAttribute="top" id="Axo-IN-LTR"/>
+                                                            <constraint firstAttribute="bottom" secondItem="vCE-ZL-Q87" secondAttribute="bottom" constant="10" id="1cS-YK-MB9"/>
+                                                            <constraint firstItem="vCE-ZL-Q87" firstAttribute="top" secondItem="GUO-vB-BrC" secondAttribute="top" constant="10" id="Axo-IN-LTR"/>
                                                             <constraint firstItem="vCE-ZL-Q87" firstAttribute="leading" secondItem="GUO-vB-BrC" secondAttribute="leading" constant="10" id="KSI-q2-omC" userLabel="Stack View.leading = leading "/>
                                                             <constraint firstAttribute="height" constant="80" id="foD-2C-Rcy"/>
                                                             <constraint firstAttribute="trailing" secondItem="vCE-ZL-Q87" secondAttribute="trailing" constant="10" id="yop-J1-JHJ" userLabel="trailing = Stack View.trailing"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" name="view-bg-color"/>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -77,19 +80,52 @@
                                             <constraint firstItem="ePC-u7-pVJ" firstAttribute="leading" secondItem="3LU-M1-1Ei" secondAttribute="leading" id="APT-MS-Y2m"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="av5-nU-7IN" userLabel="Bottom view">
-                                        <rect key="frame" x="0.0" y="417" width="414" height="401"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="av5-nU-7IN" userLabel="Middle view">
+                                        <rect key="frame" x="0.0" y="271.5" width="414" height="255"/>
                                         <subviews>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-3h-O9O">
-                                                <rect key="frame" x="10" y="92.5" width="394" height="216"/>
-                                                <color key="backgroundColor" systemColor="separatorColor"/>
-                                            </pickerView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Psd-Qo-YNw">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vY2-n7-h9c" userLabel="Coin Picker">
+                                                        <rect key="frame" x="0.0" y="19.5" width="207" height="216"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-3h-O9O">
+                                                        <rect key="frame" x="207" y="19.5" width="207" height="216"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="7Og-3h-O9O" firstAttribute="centerX" secondItem="av5-nU-7IN" secondAttribute="centerX" id="2T9-d1-L8J"/>
-                                            <constraint firstItem="7Og-3h-O9O" firstAttribute="leading" secondItem="av5-nU-7IN" secondAttribute="leading" constant="10" id="RC4-hG-6lk"/>
-                                            <constraint firstAttribute="trailing" secondItem="7Og-3h-O9O" secondAttribute="trailing" constant="10" id="yyD-Be-3Qf"/>
-                                            <constraint firstItem="7Og-3h-O9O" firstAttribute="centerY" secondItem="av5-nU-7IN" secondAttribute="centerY" id="zBv-Dm-SZS"/>
+                                            <constraint firstItem="Psd-Qo-YNw" firstAttribute="top" secondItem="av5-nU-7IN" secondAttribute="top" id="Kbc-QR-Io8"/>
+                                            <constraint firstItem="Psd-Qo-YNw" firstAttribute="leading" secondItem="av5-nU-7IN" secondAttribute="leading" id="RMp-t4-Wd8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Psd-Qo-YNw" secondAttribute="trailing" id="VPK-aX-33P"/>
+                                            <constraint firstAttribute="bottom" secondItem="Psd-Qo-YNw" secondAttribute="bottom" id="Y4n-dl-IIq"/>
+                                            <constraint firstItem="Psd-Qo-YNw" firstAttribute="centerY" secondItem="av5-nU-7IN" secondAttribute="centerY" id="fNp-pg-6vO"/>
+                                            <constraint firstItem="Psd-Qo-YNw" firstAttribute="centerX" secondItem="av5-nU-7IN" secondAttribute="centerX" id="s6M-db-6xq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ka-no-kbc" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="542.5" width="414" height="255.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfw-AA-zha">
+                                                <rect key="frame" x="157" y="108" width="100" height="40"/>
+                                                <color key="backgroundColor" name="view-bg-color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Nch-He-e87"/>
+                                                    <constraint firstAttribute="height" constant="40" id="oAW-YC-HAi"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Get Price">
+                                                    <color key="baseForegroundColor" name="Title Color"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="getPricePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kWi-4C-PU8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Zfw-AA-zha" firstAttribute="centerY" secondItem="6Ka-no-kbc" secondAttribute="centerY" id="CYx-pv-44L"/>
+                                            <constraint firstItem="Zfw-AA-zha" firstAttribute="centerX" secondItem="6Ka-no-kbc" secondAttribute="centerX" id="QOU-YJ-ToW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -100,14 +136,15 @@
                         <constraints>
                             <constraint firstItem="Z4I-6d-mme" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Onn-wt-IAz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z4I-6d-mme" secondAttribute="bottom" id="RiY-9O-OFX"/>
-                            <constraint firstItem="Z4I-6d-mme" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U7s-1s-G1n"/>
+                            <constraint firstItem="Z4I-6d-mme" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="U7s-1s-G1n"/>
                             <constraint firstItem="Z4I-6d-mme" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zJX-wP-yk0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bitcoinLable" destination="xcb-f7-CNP" id="o0W-xJ-inB"/>
+                        <outlet property="criptoPicker" destination="7Og-3h-O9O" id="Zdt-4M-nRz"/>
                         <outlet property="currencyLable" destination="lBx-tX-KMg" id="tOB-1v-3JF"/>
-                        <outlet property="currencyPicker" destination="7Og-3h-O9O" id="Cpg-0A-0JU"/>
+                        <outlet property="currencyPicker" destination="vY2-n7-h9c" id="Xyv-WO-O6Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,19 +155,13 @@
     <resources>
         <image name="bitcoinImage" width="225" height="225"/>
         <namedColor name="Title Color">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="light-dark-mode-colors">
-            <color red="0.35699999332427979" green="0.57400000095367432" blue="0.56599998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.75481010811778093" green="1" blue="0.97468044522333153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="view-bg-color">
-            <color red="0.11800000071525574" green="0.20800000429153442" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.44313728810000003" green="0.53725492949999998" blue="0.54509806630000002" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
